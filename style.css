@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fff5f8, #ffe4ec);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 79, 129, 0.2);
+  max-width: 90%;
+  width: 400px;
+  animation: popIn 0.6s ease;
+}
+
+.question {
+  font-size: 1.6rem;
+  color: #ff4f81;
+  margin-bottom: 2rem;
+  animation: slideIn 0.6s ease;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.accept {
+  background-color: #ff4f81;
+  color: white;
+}
+
+.decline {
+  background-color: #ffe4ec;
+  color: #ff4f81;
+  border: 1px solid #ff4f81;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .question { font-size: 1.3rem; }
+  .btn { width: 100%; margin: 8px 0; }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 79, 129, 0.3);
+  max-width: 90%;
+  width: 300px;
+  animation: popIn 0.4s ease;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  color: #ff4f81;
+  margin-bottom: 1.5rem;
+}

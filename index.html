@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>May Ibigay Ako Sayo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="content">
+    <div class="question" id="question">Yo! May ibigay ako sayo.</div>
+    <button class="btn accept" onclick="accept()">Accept</button>
+    <button class="btn decline" onclick="decline()">Decline</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <p id="modal-text">No, you must accept.</p>
+      <button class="btn accept" onclick="reset()">Ok</button>
+      <button class="btn decline" onclick="showModal()">No</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
